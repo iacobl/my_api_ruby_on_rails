@@ -1,0 +1,19 @@
+-- For mysql --
+
+I am still having problem with mysql2 gem but below approach helped me install mysql with RoR on Windows Env.
+
+Step 1 : Gem File changes : ({app}/Gemfile)
+
+Update mysql2 --> mysql
+
+Step 2 : Updates in database.yml file ({app}/config/database.yml)
+
+Change adapter: mysql2 --> adapter: mysql
+
+host: localhost --> host: 127.0.0.1
+
+Step 3 : Downoad mysql-connector-c-noinstall-6.0.2-win32
+
+Step 4 : Copy mysql-connector-c-noinstall-6.0.2-win32\lib\libmysql.dll file to C:\RailsInstaller\Ruby1.9.3\bin
+
+Step 5 :bundle update && Start rails server
