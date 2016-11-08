@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UserController < ActionController::API
   def new
   end
 
@@ -17,6 +17,6 @@ class UserController < ApplicationController
 
   def index
     @user = User.find(params[:id])
-    render json: @post
+    render json: @user
   end
 end
